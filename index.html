@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OSSPREY
+  </title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.ico">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://keunhong.com">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://dl.acm.org/doi/abs/10.1145/3663529.3663777">
+            Researched ACTionable (ReACT)
+          </a>
+          <a class="navbar-item" href="https://dl.acm.org/doi/abs/10.1145/3524842.3528506">
+            APEX
+          </a>
+          <a class="navbar-item" href="https://dl.acm.org/doi/abs/10.1145/3468264.3468563">
+            Sustainability Forecasting
+          </a>
+          <a class="navbar-item" href="https://conf.researchr.org/details/fse-2025/fse-2025-demonstrations/34/EvidenceBot-A-Privacy-Preserving-Customizable-RAG-Based-Tool-for-Enhancing-Large-La">
+            EvidenceBot
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <img src="static/images/favicon.ico" alt="OSSPREY System Architecture" style="height: 80px; width: 120px;">
+          <h1 class="title is-1 publication-title">OSSPREY: Open Source Software PRojEct sustainabilitY tracker</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="">Priyal Soni</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://nafiz43.github.io/portfolio/">Nafiz Imtiaz Khan</a><sup>1</sup>,
+            </span>
+
+            <!-- <span class="author-block">
+                <a href="https://utkarshsinha.com">Likang Yin</a><sup>2</sup>,
+              </span> -->
+
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/arjashok">Arjun Ashok</a><sup>1</sup>,
+            </span>
+            <!-- <span class="author-block">
+              <a href="https://jonbarron.info">Anirudh Ramchandran</a><sup>1</sup>,
+            </span> -->
+
+            <span class="author-block">
+              <a href="https://www.cs.ucdavis.edu/~filkov/">Vladimir Filkov</a><sup>1</sup>,
+            </span>
+           
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Department of Computer Science, University of California, Davis</span>
+            <!-- <span class="author-block"><sup>2</sup>Google Research</span> -->
+
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <!-- <span class="link-block">
+                <a href="https://arxiv.org/pdf/2011.12948"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2011.12948"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span> -->
+              <!-- Live Link. -->
+              <span class="link-block">
+                <a href="https://ossprey.netlify.app" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-rocket"></i>
+                  </span>
+                  <span>Live</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/orgs/OSS-PREY/repositories" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://zenodo.org/records/4564072" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+            </span>
+              <!-- Installation Manual. -->
+            <span class="link-block">
+              <a href="installation_manual.html" target="_blank"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="fas fa-tools"></i>
+                </span>
+                <span>Installation Manual</span>
+                </a>
+          </span>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            OSSPREY (Open Source PRoject sustainabilitY tracker) is built to help open source projects not just survive, but thrive. Instead of relying on surface-level metrics, OSSPREY looks deeper — mapping how people collaborate, how code evolves, and how projects grow or struggle over time.
+
+            We combine network analysis, machine learning, and lessons pulled directly from real research to offer practical, evidence-based recommendations — not just vague advice. Our goal is simple: make it easier for maintainers, contributors, and foundations to spot risks early, understand what’s working, and take action to build more sustainable projects.
+
+            Open source is complex and always changing. OSSPREY gives you tools that grow with you — whether you're steering a small project or managing a major foundation’s portfolio. It’s not about static scores or dashboards; it’s about building a healthier future for your community.
+            </p>
+
+           <p>To learn more about OSSPREY, visit our live link at <a href="https://ossprey.netlify.app" target="_blank">ossprey.netlify.app</a>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- <section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">System Architecture</h2>
+        <div class="content has-text-justified">
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">System Architecture</h2>
+        <div class="content has-text-justified">
+
+          <!-- System Architecture Image -->
+          <figure class="image is-4by3">
+            <img src="static/images/system_architecture.png" alt="OSSPREY System Architecture" style="height: 80%;">
+            <figcaption class="has-text-centered is-size-6 mt-2">Figure: High-level architecture of OSSPREY</figcaption>
+          </figure>
+
+          <p>
+            <strong>OSSPREY</strong> (Open Source PRoject sustainabilitY tracker) is a modular, full-stack system designed to evaluate and improve the sustainability of open-source projects. It leverages a robust data processing pipeline, socio-technical network modeling, machine learning predictions, and evidence-driven recommendations to support OSS maintainers and communities. Below is a detailed breakdown of its architecture.
+          </p>
+
+          <h4 class="title is-5 mt-5">1. Data Scraper (Rust)</h4>
+          <p>
+            The pipeline begins with a fast and reliable data scraping engine implemented in <strong>Rust</strong>. This component retrieves raw project data from various open-source repositories such as GitHub, Apache, and Eclipse. It collects key information including commit histories, issue threads, pull requests, contributor activity, and email communications when available. Rust was chosen for its performance and memory safety, allowing efficient scraping of large datasets across many projects.
+          </p>
+
+          <h4 class="title is-5 mt-5">2. Network Generator (Python)</h4>
+          <p>
+            The next stage processes the raw data into structured monthly <strong>socio-technical networks</strong>. Two types of networks are constructed:
+            <ul>
+              <li><strong>Social Networks:</strong> Nodes are the developers who communicate via email, lists or issues, and edges indicate their communication. E.g., if A sends an email on the mailing list, and B replies, then A → B. Communication patterns correlate with productivity and organization.</li>
+              <li><strong>Technical Networks:</strong> Nodes are the developers (left) and files (right), edges indicate who committed code changes to the files (for tractability we aggregate files by their extensions). Multi-tasking and collaboration behaviors arise in the technical networks.</li>
+            </ul>
+            These dynamic networks offer a detailed view into how OSS communities organize and evolve over time.
+          </p>
+
+          <h4 class="title is-5 mt-5">3. Health Predictor (Python)</h4>
+          <p>
+            The <strong>Health Predictor</strong> is a machine learning module trained on historical OSS project data. It takes the extracted network metrics and evaluates the sustainability of a project using features such as:
+            <ul>
+              <li>Contributor centrality and diversity</li>
+              <li>Activity bursts and drop-offs</li>
+              <li>Network modularity and communication density</li>
+            </ul>
+            The output is a prediction about the project's health trajectory, such as whether it's on track to succeed, stagnate, or fail.
+          </p>
+
+          <h4 class="title is-5 mt-5">4. ReACT Recommender (Python)</h4>
+          <p>
+            OSSPREY goes a step further by offering actionable, research-backed advice via the <strong>ReACT (Researched Actionables) Recommender</strong>. Drawing from peer-reviewed software engineering literature, this module suggests concrete actions tailored to the project’s network profile. Each recommendation is grounded in published evidence and can include strategies like:
+            <ul>
+              <li>Implementing mentorship programs</li>
+              <li>Encouraging modularization of the codebase</li>
+              <li>Facilitating structured communication practices</li>
+            </ul>
+            This makes the platform not just diagnostic, but also prescriptive.
+          </p>
+
+          <h4 class="title is-5 mt-5">5. MongoDB (Data Store)</h4>
+          <p>
+            The entire system is underpinned by a <strong>MongoDB</strong> database that stores raw inputs, network outputs, prediction results, and recommendations. This NoSQL setup is ideal for managing OSS metadata, which is often semi-structured and variable in format across different ecosystems.
+          </p>
+
+          <h4 class="title is-5 mt-5">Data Flow Summary</h4>
+          <p>
+            The architecture follows a clean and modular data flow:
+          </p>
+          <pre><code>Raw OSS Data 
+    ↓
+Data Scraper (Rust) 
+    ↓
+Network Generator (Python) 
+    ↓
+Health Predictor (Python) 
+    ↓
+ReACT Recommender (Python) 
+    ↓
+Frontend + MongoDB Storage
+          </code></pre>
+
+          <p>
+            This system allows OSSPREY to move from passive monitoring to active sustainability guidance, tailored to each project’s unique socio-technical landscape.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Installation Manual</h2>
+        <div class="content has-text-justified">
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- 
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{park2021nerfies,
+  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
+  title     = {Nerfies: Deformable Neural Radiance Fields},
+  journal   = {ICCV},
+  year      = {2021},
+}</code></pre>
+  </div>
+</section> -->
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/nafiz43" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a> and is based on the Nerfies website source code from Park et al.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
