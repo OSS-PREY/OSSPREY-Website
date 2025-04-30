@@ -1,4 +1,4 @@
-# Installation Manual
+# OSSPREY Installation Manual
 
 ## Step 1: Clone All Repositories
 
