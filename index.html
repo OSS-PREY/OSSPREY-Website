@@ -475,6 +475,23 @@ MONGODB_URI="mongodb://ossprey-backend:FL3YyVGCr79xlPT0@localhost:27017/decal-db
               <pre><code>gunicorn -w 4 --max-requests 100 --max-requests-jitter 10 --timeout 120 -b 0.0.0.0:5000 run:app</code></pre>
             </li>
 
+
+            ngrok http --url=ossprey.ngrok.app 5000
+
+            <li><strong>Configuring NGROK:</strong>
+             <ul>
+              <li>Download and install ngrok from <a href="https://ngrok.com/download" target="_blank">ngrok.com/download</a></li>
+              <li>Sign up for a free account at <a href="https://ngrok.com/signup" target="_blank">ngrok.com/signup</a></li>
+              <li>Authenticate your ngrok account using the command below:</li> 
+              <pre><code>ngrok config add-authtoken YOUR_AUTH_TOKEN</code></pre>
+              <li>Start ngrok to expose your local server to the internet:</li>
+              <pre><code>ngrok http 5000</code></pre>
+              <li>Copy the forwarding URL provided by ngrok (e.g., <code>https://123456789.ngrok.io</code>) and use it to access your local server from anywhere.</li>
+              <li>To stop ngrok, simply press <code>Ctrl + C</code> in the terminal where ngrok is running.</li>
+             </ul>
+            </li>
+
+
             <li><strong>Debug locally using Flask (development):</strong>
               <pre><code>python -m flask run</code></pre>
               Or, to allow external access:
@@ -559,6 +576,25 @@ MONGODB_URI="mongodb://ossprey-backend:FL3YyVGCr79xlPT0@localhost:27017/decal-db
   </div>
 </section>
 
+<section class="section" id="License">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 has-text-centered">
+          License
+        </h2>
+        <p>
+          The OSSPREY project is licensed under the Apache License 2.0. 
+          This permissive license allows you to use, modify, and distribute the software for both personal and commercial purposes, 
+          as long as you include proper attribution and comply with the terms outlined in the license.
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+
+
 
 
 <section class="section" id="Contributing">
@@ -588,12 +624,20 @@ MONGODB_URI="mongodb://ossprey-backend:FL3YyVGCr79xlPT0@localhost:27017/decal-db
           Contact
         </h2>
         <p>
-          For high-level discussions, funding opportunities, or collaboration inquiries, please reach out to the project supervisor, <strong>Professor Vladimir Filkov</strong> 
+          For high-level discussions, funding opportunities, or collaboration inquiries, please reach out to the project supervisor, 
+          <strong>Professor Vladimir Filkov</strong> 
           (<a href="mailto:vfilkov@ucdavis.edu">vfilkov@ucdavis.edu</a>).
         </p>
         <p>
-          For technical questions, bug reports, or concerns regarding the codebase, please contact the current tech lead, <strong>Nafiz Imtiaz Khan</strong> 
+          For technical questions, bug reports, or concerns regarding the codebase, please contact the current tech lead, 
+          <strong>Nafiz Imtiaz Khan</strong> 
           (<a href="mailto:nikhan@ucdavis.edu">nikhan@ucdavis.edu</a>).
+        </p>
+        <p>
+          For general discussions, contributions, and community updates, join our 
+          <a href="https://join.slack.com/t/osspreyworkspace/shared_invite/zt-35bsf2ypc-tS1a5~~n~33FzVUZptKFUA" target="_blank">
+            OSSPREY Slack workspace
+          </a>.
         </p>
         <p>
           We're excited to hear from you!
@@ -602,6 +646,7 @@ MONGODB_URI="mongodb://ossprey-backend:FL3YyVGCr79xlPT0@localhost:27017/decal-db
     </div>
   </div>
 </section>
+
 
 <!-- 
 <section class="section" id="BibTeX">
