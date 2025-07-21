@@ -185,6 +185,16 @@
                   <span>Data</span>
                   </a>
             </span>
+              <!-- Features Link. -->
+              <span class="link-block">
+                <a href="#Features" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-list"></i>
+                  </span>
+                  <span>Features</span>
+                  </a>
+              </span>
               <!-- Installation Manual. -->
             <span class="link-block">
               <a href="#Installation" target="_blank"
@@ -343,6 +353,79 @@ Frontend + MongoDB Storage
   </div>
 </section>
 
+<section class="section" id="Features">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Feature Descriptions of the Forecaster Module</h2>
+        <div class="content has-text-justified">
+          <table class="table is-striped is-fullwidth">
+            <thead>
+              <tr>
+                <th>Feature Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>s_num_nodes</code></td>
+                <td>Number of unique active developers in the social network during a given month.</td>
+              </tr>
+              <tr>
+                <td><code>s_avg_clustering_coef</code></td>
+                <td>Average clustering coefficient in the social network, representing how interconnected a developer’s neighbors are.</td>
+              </tr>
+              <tr>
+                <td><code>s_graph_density</code></td>
+                <td>Density of the social network graph, measuring overall connectivity between nodes.</td>
+              </tr>
+              <tr>
+                <td><code>s_num_component</code></td>
+                <td>Number of disconnected components in the social network, indicating fragmentation.</td>
+              </tr>
+              <tr>
+                <td><code>s_weighted_mean_degree</code></td>
+                <td>Weighted mean degree of the social network, capturing the average number of interactions per contributor.</td>
+              </tr>
+              <tr>
+                <td><code>s_net_overlap</code></td>
+                <td>Number of developers who were active in both the current and previous month in the social network.</td>
+              </tr>
+              <tr>
+                <td><code>t_graph_density</code></td>
+                <td>Density of the technical network, reflecting the level of collaboration among developers via shared file modifications.</td>
+              </tr>
+              <tr>
+                <td><code>t_num_dev_per_file</code></td>
+                <td>Average number of developers modifying each file (developers per file node).</td>
+              </tr>
+              <tr>
+                <td><code>t_num_dev_nodes</code></td>
+                <td>Number of unique developers active in the technical network during the given month.</td>
+              </tr>
+              <tr>
+                <td><code>t_num_file_nodes</code></td>
+                <td>Number of unique files modified by developers in the technical network.</td>
+              </tr>
+              <tr>
+                <td><code>t_num_file_per_dev</code></td>
+                <td>Average number of files modified per developer (files per developer node).</td>
+              </tr>
+              <tr>
+                <td><code>t_net_overlap</code></td>
+                <td>Number of developers who were consistently active across consecutive months in the technical network.</td>
+              </tr>
+              <tr>
+                <td><code>st_num_dev</code></td>
+                <td>Number of developers contributing to both social and technical networks, representing integrated participation.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="section" id="API">
   <div class="container is-max-desktop">
