@@ -344,6 +344,97 @@ Frontend + MongoDB Storage
 </section>
 
 
+<section class="section" id="API">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">
+          <i class="fas fa-code"></i> API Endpoints
+        </h2>
+        <div class="content has-text-justified">
+          <table class="table is-striped is-fullwidth">
+            <thead>
+              <tr>
+                <th>Endpoint</th>
+                <th>Purpose</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>POST /api/upload_git_link</code></td>
+                <td>Uploads a GitHub repository link and returns forecast data, ReACTs, metadata, and raw commit/email data.</td>
+              </tr>
+              <tr>
+                <td><code>GET /api/projects</code></td>
+                <td>Retrieves all Apache project names.</td>
+              </tr>
+              <tr>
+                <td><code>GET /api/project_info</code></td>
+                <td>Returns metadata for Apache projects, including sponsor, mentors, and descriptions.</td>
+              </tr>
+              <tr>
+                <td><code>GET /eclipse/project_info</code></td>
+                <td>Retrieves metadata for Eclipse projects (those with <code>display: true</code>).</td>
+              </tr>
+              <tr>
+                <td><code>GET /api/monthly_ranges</code></td>
+                <td>Returns valid month ranges for Apache projects.</td>
+              </tr>
+              <tr>
+                <td><code>GET /api/grad_forecast/{project_id}</code></td>
+                <td>Fetches sustainability forecast for Apache projects.</td>
+              </tr>
+              <tr>
+                <td><code>GET /eclipse/grad_forecast/{project_id}</code></td>
+                <td>Fetches sustainability forecast for Eclipse projects.</td>
+              </tr>
+              <tr>
+                <td><code>GET /api/email_measure/{project_id}/{month}</code></td>
+                <td>Retrieves email-based quantitative metrics.</td>
+              </tr>
+              <tr>
+                <td><code>GET /api/commit_measure/{project_id}/{month}</code></td>
+                <td>Retrieves commit-based quantitative metrics.</td>
+              </tr>
+              <tr>
+                <td><code>GET /api/commit_links/{project_id}/{month}</code></td>
+                <td>Fetches commit links for a given month, filtered by developer in frontend.</td>
+              </tr>
+              <tr>
+                <td><code>GET /api/email_links/{project_id}/{month}</code></td>
+                <td>Fetches email links for a given month, filtered by developer in frontend.</td>
+              </tr>
+              <tr>
+                <td><code>GET /api/social_net/{project_id}/{month}</code></td>
+                <td>Fetches email interaction network (Apache projects).</td>
+              </tr>
+              <tr>
+                <td><code>GET /api/tech_net/{project_id}/{month}</code></td>
+                <td>Fetches technical collaboration network (Apache projects).</td>
+              </tr>
+              <tr>
+                <td><code>GET /eclipse/social_net/{project_id}/{month}</code></td>
+                <td>Fetches Eclipse-specific email interaction network.</td>
+              </tr>
+              <tr>
+                <td><code>GET /eclipse/tech_net/{project_id}/{month}</code></td>
+                <td>Fetches Eclipse-specific technical collaboration network.</td>
+              </tr>
+              <tr>
+                <td><code>GET /react_set.json</code></td>
+                <td>Loads a static set of ReACT recommendations.</td>
+              </tr>
+              <tr>
+                <td><code>GET /foundation.json</code></td>
+                <td>Loads time-series data used to compute ReACTs per project/month.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 <section class="section" id="Installation">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
