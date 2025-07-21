@@ -88,7 +88,7 @@
         <a class="navbar-link">
           Related Research
         </a>
-        <div class="navbar-dropdown">  
+        <div class="navbar-dropdown">
           <a class="navbar-item" href="https://dl.acm.org/doi/abs/10.1145/3468264.3468563" target="_blank">
             Sustainability Forecasting
           </a>
@@ -102,6 +102,13 @@
           </a>
         </div>
       </div>
+
+      <a class="navbar-item" href="#User-Guide">
+        <span class="icon">
+          <i class="fas fa-book-open"></i>
+        </span>
+        <span>User Guide</span>
+      </a>
     </div>
 
   </div>
@@ -513,6 +520,40 @@ Frontend + MongoDB Storage
               </tr>
             </tbody>
           </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section" id="User-Guide">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">
+          <i class="fas fa-book"></i> User Guide
+        </h2>
+        <div class="content has-text-justified">
+<p>This guide walks you through each element of the OSSPREY dashboard and explains how it contributes to understanding project sustainability.</p>
+
+<h4 class="title is-4">Project Selector</h4>
+<p>Select a repository from the drop-down list and define the time window with the month slider. The forecast, networks, and actionables instantly refresh to show information for the chosen span of months. This enables fine-grained exploration of longitudinal trends.</p>
+
+<h4 class="title is-4">Project Details</h4>
+<p>The details card summarizes metadata about the selected project such as its incubation status, GitHub link, and popularity metrics like stars or forks. Reviewing this information helps set expectations about activity levels before interpreting the predictive plots.</p>
+
+<h4 class="title is-4">Probability of Sustainability</h4>
+<p>A line chart visualizes the predicted health score from 0 (low) to 1 (high). Hover over the graph to inspect monthly probabilities. Downward slopes or sharp drops indicate periods of risk where intervention may be required.</p>
+
+<h4 class="title is-4">Researched Actionables</h4>
+<p>Based on deviations in the forecast and socio-technical metrics, this table lists research-backed recommendations. Each item links to the supporting literature and is annotated with a severity level so maintainers can prioritize critical actions.</p>
+
+<h4 class="title is-4">Social Network</h4>
+<p>The social network graph illustrates how contributors communicate across issues and mailing lists. Nodes correspond to developers and edges denote message exchanges. Dense clusters highlight active discussion, while isolated nodes reveal potential disconnects.</p>
+
+<h4 class="title is-4">Technical Network</h4>
+<p>This diagram maps collaboration on code by linking developers to file types they modify. Inspecting who works on which parts of the codebase can identify key maintainers, shared ownership, or overly siloed components.</p>
+
+<p>By reviewing these visualizations in concert, you can monitor a project's momentum and apply targeted interventions to support its long-term success.</p>
         </div>
       </div>
     </div>
