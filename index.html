@@ -283,12 +283,11 @@
   </div>
 </section> -->
 
-<section class="section" id="System-Architecture">
+<section class="section" id="System-Modules">
   <div class="container is-max-desktop">
-    <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">System Architecture</h2>
+        <h2 class="title is-3">System Modules</h2>
         <div class="content has-text-justified">
 
             <!-- System Architecture Image -->
@@ -299,7 +298,6 @@
             </figure>
             -->
 
-            <h3 class="title is-4">System Modules</h3>
             <p>
               OSSPREY's architecture comprises four integrated modules that enable real-time sustainability forecasting and actionable recommendation generation.
             </p>
@@ -323,8 +321,18 @@
             <p>
               This Python-based recommendation engine implements the ReACTs framework, which consists of 105 curated actionables derived from 186 empirical software engineering studies. The module identifies underperforming features and recommends interventions tagged as <em>Critical</em>, <em>Medium</em>, or <em>Low</em> based on their impact, linking each recommendation to the original research publication.
             </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-            <h3 class="title is-4 mt-5">System Architecture</h3>
+<section class="section" id="System-Architecture">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">System Architecture</h2>
+        <div class="content has-text-justified">
             <p>
               The system follows a modular pipeline architecture where data flows sequentially from GitHub scraping to sustainability forecasting and actionable recommendation delivery. Raw data collected by the Scraper module is written to an intermediate file system in structured format. This data is then passed to the Network Generator module, which constructs monthly socio-technical networks based on developer communication and collaboration patterns. These network snapshots are used to compute project features that serve as input to the Forecaster Module, which estimates month-wise sustainability probabilities, and to the ReACT Recommender, which generates tailored, evidence-based interventions.
             </p>
