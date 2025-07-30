@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Introducing OSSPREY: AI-Powered Forecasting and Actionable Insights for OSS Sustainability</title>
+  <link rel="icon" href="https://oss-prey.github.io/OSSPREY-Website/static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+      color: #222222;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 2em;
+    }
+    h1, h2, h3 {
+      color: #0f3c68;
+    }
+    a {
+      color: #1a73e8;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .cta {
+      margin-top: 2em;
+      background-color: #0f3c68;
+      color: white;
+      padding: 1em 2em;
+      display: inline-block;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    blockquote {
+      background: #f1f1f1;
+      border-left: 5px solid #0f3c68;
+      margin: 1.5em 0;
+      padding: 1em;
+      font-style: italic;
+    }
+    .screenshot {
+      margin: 2em 0;
+      text-align: center;
+    }
+    .screenshot img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    .icon-center {
+      text-align: center;
+      margin-top: 1em;
+    }
+    .icon-center img {
+      width: 80px;
+      height: 80px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Introducing OSSPREY: AI-Powered Forecasting and Actionable Insights for OSS Sustainability</h1>
+
+    <p>Open Source Software (OSS) powers everything from academic research to mission-critical infrastructure at tech giants. Yet, over <strong>90% of OSS projects experience stagnation or abandonment</strong>. The question is no longer whether OSS matters, but <em>how to ensure its sustainability</em>.</p>
+
+    <h2>Meet OSSPREY</h2>
+
+    <div class="icon-center">
+      <img src="https://oss-prey.github.io/OSSPREY-Website/static/images/favicon.ico" alt="OSSPREY Icon">
+    </div>
+
+    <p><strong>OSSPREY (Open Source Software PRoject sustainabilitY tracker)</strong> is an intelligent, modular, and research-backed platform that enables open source maintainers to anticipate and address project health issues before they become critical. Developed by the DECAL Lab at UC Davis, OSSPREY uniquely combines real-time GitHub data scraping, socio-technical network modeling, machine learning forecasting, and a curated knowledge base of interventions grounded in software engineering research.</p>
+
+    <p>By analyzing both technical contributions (e.g., commits, file changes) and social signals (e.g., issue discussions, collaboration patterns), OSSPREY delivers comprehensive month-by-month sustainability forecasts. What truly sets it apart is its ReACT recommendation engine, which maps empirical research findings to tailored, actionable strategies maintainers can deploy to counteract emerging risks—such as declining contributor activity, fragmented communication, or stagnant issue resolution.</p>
+
+    <blockquote>“OSSPREY bridges the gap between academic sustainability metrics and real-world decision making by providing both forecasts and evidence-based recommendations.”</blockquote>
+
+    <h2>Why OSSPREY Matters</h2>
+    <p>Traditional metrics like issue count or commit frequency don’t tell the full story. OSSPREY moves beyond snapshots and offers:</p>
+    <ul>
+      <li><strong>Real-time monitoring</strong> of GitHub projects using socio-technical networks.</li>
+      <li><strong>Month-by-month sustainability forecasts</strong> powered by a transformer model with 94% F1-score accuracy.</li>
+      <li><strong>Actionable ReACTs</strong> — evidence-based interventions curated from 186 empirical studies.</li>
+      <li><strong>Interactive network visualizations</strong> showing communication and technical dependencies.</li>
+    </ul>
+
+    <h2>How It Works</h2>
+    <p>OSSPREY’s pipeline includes four key modules:</p>
+    <ul>
+      <li><strong>Scraper:</strong> Rust-based module collects commits, issues, and metadata monthly via GitHub GraphQL API.</li>
+      <li><strong>Network Generator:</strong> Builds social and technical networks to map collaboration and file ownership.</li>
+      <li><strong>Forecaster:</strong> Transformer model forecasts future sustainability based on historical network features.</li>
+      <li><strong>ReACT-Recommender:</strong> Suggests empirically validated strategies when sustainability dips.</li>
+    </ul>
+
+    <div class="screenshot">
+      <img src="https://raw.githubusercontent.com/OSS-PREY/OSSPREY-Website/refs/heads/main/static/images/ossprey-dashboard.png" alt="OSSPREY Dashboard Screenshot">
+      <p><em>OSSPREY dashboard with forecast trajectories, socio-technical networks, and actionable suggestions</em></p>
+    </div>
+
+    <h2>Dashboard Highlights</h2>
+    <ul>
+      <li><strong>Forecast Graph:</strong> Visualizes project sustainability with branching future scenarios (positive, neutral, negative).</li>
+      <li><strong>Actionables Panel:</strong> Ranks interventions by impact level and relevance. Each is linked to peer-reviewed research.</li>
+      <li><strong>Social + Technical Network:</strong> View developer interaction and technical load distribution via interactive Sankey charts.</li>
+      <li><strong>Project Metadata:</strong> Stargazers, forks, sponsors, contributor trends, and more contextual insights.</li>
+    </ul>
+
+    <h2>Who Should Use OSSPREY?</h2>
+    <p>If you're a <strong>maintainer, community manager, OSS foundation lead, or software engineering researcher</strong>, OSSPREY gives you the tools to understand and shape the future of your project — not just respond to symptoms after it’s too late.</p>
+
+    <h2>Ready to Explore?</h2>
+    <p>Don’t let project burnout or declining engagement catch you off guard. With OSSPREY, you gain foresight—and a roadmap for sustainability.</p>
+
+    <p><a href="https://oss-prey.github.io/OSSPREY-Website/" class="cta">Try OSSPREY Now</a></p>
+    <p><a href="https://www.youtube.com/watch?v=N7a0v4hPylU">🎥 Watch the Dashboard Demo</a></p>
+
+    <h2>Future Directions</h2>
+    <p>We’re working on integrating dependency-aware forecasting, personalized suggestions using LLMs, and parallelism upgrades for large-scale project scraping. OSSPREY is open-source and actively maintained—contributions and feedback are welcome!</p>
+
+    <h3>Resources</h3>
+    <ul>
+      <li><a href="https://oss-prey.github.io/OSSPREY-Website/">Project Website</a></li>
+      <li><a href="https://oss-prey.github.io/OSSPREY-Website/#API">API Documentation</a></li>
+      <li><a href="https://oss-prey.github.io/OSSPREY-Website/#Features">Feature Set</a></li>
+    </ul>
+
+    <p>Built by the DECAL Lab at UC Davis, OSSPREY is paving the way for data-driven, evidence-based OSS sustainability. Empower your project with proactive insights today.</p>
+  </div>
+</body>
+</html>
