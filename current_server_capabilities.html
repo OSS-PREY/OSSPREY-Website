@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Current Server Capabilities</title>
+  <link rel="icon" href="https://oss-prey.github.io/OSSPREY-Website/static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+      color: #222222;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 2em 1.5em 3em;
+    }
+    h1 {
+      color: #0f3c68;
+      text-align: center;
+      margin-bottom: 1.5em;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 2em;
+      background-color: #f8fbff;
+      box-shadow: 0 4px 12px rgba(15, 60, 104, 0.1);
+    }
+    caption {
+      caption-side: top;
+      font-size: 1.3em;
+      font-weight: bold;
+      color: #0f3c68;
+      padding: 1em;
+    }
+    th, td {
+      border: 1px solid #d0d8e8;
+      padding: 1em;
+      vertical-align: top;
+    }
+    th {
+      background-color: #0f3c68;
+      color: #ffffff;
+      text-align: left;
+      width: 30%;
+    }
+    td ul {
+      margin: 0;
+      padding-left: 1.2em;
+    }
+    td ul li {
+      margin-bottom: 0.4em;
+    }
+    td ul li:last-child {
+      margin-bottom: 0;
+    }
+    .note {
+      background-color: #eef4ff;
+      border-left: 4px solid #0f3c68;
+      padding: 1em;
+      margin-top: 1em;
+      font-style: italic;
+    }
+    a {
+      color: #1a73e8;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Current Server Capabilities</h1>
+    <table>
+      <caption>Local Server Configuration</caption>
+      <tbody>
+        <tr>
+          <th scope="col">Component</th>
+          <th scope="col">Configuration</th>
+        </tr>
+        <tr>
+          <td>Primary Memory (RAM)</td>
+          <td>64 GB</td>
+        </tr>
+        <tr>
+          <td>Secondary Memory (Hard Disk)</td>
+          <td>512 GB SSD</td>
+        </tr>
+        <tr>
+          <td>Processor</td>
+          <td>
+            <ul>
+              <li><strong>Name:</strong> Intel(R) Xeon(R) W-2135 CPU @ 3.70GHz</li>
+              <li><strong>Architecture:</strong> x86_64</li>
+              <li><strong>CPU(s):</strong> 12</li>
+              <li><strong>Thread(s) per core:</strong> 2</li>
+              <li><strong>Core(s) per socket:</strong> 6</li>
+              <li><strong>Max Clock Speed:</strong> 4500.00 MHz</li>
+              <li><strong>Min Clock Speed:</strong> 1200.00 MHz</li>
+              <li><strong>PCI Express Lanes:</strong> 48</li>
+              <li><strong>Integrated Graphics:</strong> None</li>
+              <li><strong>TDP (Thermal Design Power):</strong> 140 W</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>Cache</td>
+          <td>
+            <ul>
+              <li><strong>L1d cache:</strong> 192 KiB (6 instances)</li>
+              <li><strong>L1i cache:</strong> 192 KiB (6 instances)</li>
+              <li><strong>L2 cache:</strong> 6 MiB (6 instances)</li>
+              <li><strong>L3 cache:</strong> 8.3 MiB (1 instance)</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>GPU</td>
+          <td>
+            <ul>
+              <li><strong>Name:</strong> GV100 [TITAN V]</li>
+              <li><strong>Memory:</strong> 12 GB HBM2</li>
+              <li><strong>Memory Interface Width:</strong> 3072 bits</li>
+              <li><strong>Memory Bandwidth:</strong> 652.8 GB/s</li>
+              <li><strong>Base Clock Speed:</strong> 1200 MHz</li>
+              <li><strong>Boost Clock Speed:</strong> 1455 MHz</li>
+              <li><strong>Memory Clock Speed:</strong> 850 MHz (1700 MHz effective)</li>
+              <li><strong>CUDA Cores:</strong> 5120</li>
+              <li><strong>Tensor Cores:</strong> 640</li>
+              <li><strong>Thermal Design Power (TDP):</strong> 250 W</li>
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="note">These specifications capture the configuration of the local server powering our hosted environment.</p>
+    <p>Return to the <a href="blog_post.html">OSSPREY blog post</a> to learn how these capabilities accelerate our forecasting pipeline.</p>
+  </div>
+</body>
+</html>
