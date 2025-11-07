@@ -1,0 +1,44 @@
+cff-version: 1.2.0
+title: "OSSPREY: Open Source Software PRojEct sustainabilitY tracker"
+message: "If you use OSSPREY in your work, please cite it using the metadata from this file."
+type: software
+abstract: |
+  OSSPREY helps researchers and practitioners monitor and improve the sustainability of open
+  source software projects by combining socio-technical network analysis with machine learning
+  driven forecasting and actionable recommendations.
+authors:
+  - family-names: Khan
+    given-names: Nafiz Imtiaz
+  - family-names: Soni
+    given-names: Priyal
+  - family-names: Ashok
+    given-names: Arjun
+  - family-names: Kashyap
+    given-names: Sankalp
+  - family-names: Filkov
+    given-names: Vladimir
+version: 1.0.0
+date-released: 2024-10-01
+repository-code: https://github.com/OSS-PREY/OSSPREY-Website
+url: https://ossprey.netlify.app
+preferred-citation:
+  type: software
+  title: "OSSPREY: Open Source Software PRojEct sustainabilitY tracker"
+  authors:
+    - family-names: Khan
+      given-names: Nafiz Imtiaz
+    - family-names: Soni
+      given-names: Priyal
+    - family-names: Ashok
+      given-names: Arjun
+    - family-names: Kashyap
+      given-names: Sankalp
+    - family-names: Filkov
+      given-names: Vladimir
+  version: 1.0.0
+  date-released: 2024-10-01
+  repository-code: https://github.com/OSS-PREY/OSSPREY-Website
+  url: https://ossprey.netlify.app
+  abstract: |
+    OSSPREY provides sustainability forecasting and evidence-based interventions for open
+    source software projects.
