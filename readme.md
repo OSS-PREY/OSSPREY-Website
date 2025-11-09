@@ -121,9 +121,9 @@ git clone https://github.com/OSS-PREY/OSSPREY-OSS-Scraper-Tool
     GITHUB_TOKEN_3="PERSONAL-TOKEN-3"
     GITHUB_TOKEN_4="PERSONAL-TOKEN-4"
             
-    PEX_GENERATOR_REPO_URL="https://github.com/arjashok/pex-forecaster.git"
-    OSS_SCRAPER_REPO_URL="https://github.com/priyalsoni15/OSS-scraper.git"
-    PEX_GENERATOR_DIR="/mnt/data1/OSPEX/root-linode/pex-forecaster"
+    PEX_GENERATOR_REPO_URL="https://github.com/OSS-PREY/OSSPREY-Pex-Forecaster.git"
+    OSS_SCRAPER_REPO_URL="https://github.com/OSS-PREY/OSSPREY-OSS-Scraper-Tool.git"
+    PEX_GENERATOR_DIR="/pex-forecaster"
     OSS_SCRAPER_DIR="/OSSPREY-OSS-Scraper-Tool"
     REACT_API_DIR="/OSSPREY-ReACT-API"
     GITHUB_USERNAME="GITHUB_USERNAME"
