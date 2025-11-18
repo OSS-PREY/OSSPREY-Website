@@ -92,6 +92,14 @@ function updateViewCountElement(value) {
   element.textContent = value;
 }
 
+function updateUserCountElement(value) {
+  const element = document.getElementById('user-count');
+  if (!element) {
+    return;
+  }
+  element.textContent = value;
+}
+
 async function recordView() {
   try {
     await fetchWithFallback('/api/record_view', {
@@ -150,6 +158,36 @@ async function fetchViewCount() {
   }
 }
 
+async function fetchUserCount() {
+  const element = document.getElementById('user-count');
+  if (!element) {
+    return;
+  }
+
+  try {
+    const response = await fetchWithFallback('/api/users', {
+      method: 'GET',
+      mode: 'cors'
+    });
+    const data = await response.json();
+
+    if (!data || !Array.isArray(data.users)) {
+      throw new Error('Invalid users payload');
+    }
+
+    const uniqueEmails = new Set(
+      data.users
+        .map((user) => (user && typeof user.email === 'string' ? user.email.trim().toLowerCase() : null))
+        .filter((email) => email)
+    );
+
+    updateUserCountElement(uniqueEmails.size.toLocaleString());
+  } catch (err) {
+    console.error('users endpoint failed', err);
+    updateUserCountElement('N/A');
+  }
+}
+
 async function initializeViewCounter() {
   const element = document.getElementById('view-count');
   if (!element) {
@@ -157,8 +195,10 @@ async function initializeViewCounter() {
   }
 
   updateViewCountElement('...');
+  updateUserCountElement('...');
   await recordView();
   await fetchViewCount();
+  await fetchUserCount();
 }
 
 document.addEventListener('DOMContentLoaded', () => {
