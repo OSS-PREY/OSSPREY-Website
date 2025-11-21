@@ -133,6 +133,44 @@
       border-color: #374151;
       color: #e5e7eb;
     }
+
+    /* --- Fix tables in dark mode (override Bulma + Bootstrap) --- */
+    body.dark-mode table.table {
+      background-color: #020617 !important;
+      color: #e5e7eb !important;
+    }
+    
+    /* Cells */
+    body.dark-mode table.table th,
+    body.dark-mode table.table td {
+      background-color: #020617 !important;
+      color: #e5e7eb !important;
+      border-color: #1f2937 !important;
+    }
+    
+    /* Header row */
+    body.dark-mode table.table thead th {
+      background-color: #020617 !important;
+      color: #e5e7eb !important;
+    }
+    
+    /* Striping: keep everything solid, slight hover highlight */
+    body.dark-mode table.table tbody tr:nth-of-type(odd),
+    body.dark-mode table.table tbody tr:nth-of-type(even) {
+      background-color: #020617 !important;
+    }
+    
+    body.dark-mode table.table tbody tr:hover {
+      background-color: #111827 !important;
+    }
+    
+    /* Make sure code blocks in table cells look right too */
+    body.dark-mode table.table code {
+      background-color: #020617 !important;
+      color: #e5e7eb !important;
+      border-color: #1f2937 !important;
+    }
+
   </style>
 </head>
 <body>
