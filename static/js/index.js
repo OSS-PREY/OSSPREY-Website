@@ -26,20 +26,20 @@ function updateThemeToggle(theme) {
 
   if (theme === 'dark') {
     icon.removeClass('fa-moon').addClass('fa-sun');
-    label.text('Light');
+    label.text('Switch to Light');
     button.removeClass('is-light').addClass('is-dark');
   } else {
     icon.removeClass('fa-sun').addClass('fa-moon');
-    label.text('Dark');
+    label.text('Switch to Dark');
     button.removeClass('is-dark').addClass('is-light');
   }
 }
 
 function setTheme(theme) {
   if (theme === 'dark') {
-    $('body').addClass('dark-mode');
+    $('body').addClass('dark-mode').removeClass('light-mode');
   } else {
-    $('body').removeClass('dark-mode');
+    $('body').addClass('light-mode').removeClass('dark-mode');
   }
   updateThemeToggle(theme);
 }

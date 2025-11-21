@@ -44,6 +44,57 @@
       transition: background-color 0.3s ease, color 0.3s ease;
     }
 
+    body.light-mode {
+      background-color: #ffffff;
+      color: #111827;
+    }
+
+    body.light-mode a {
+      color: #1d4ed8;
+    }
+
+    body.light-mode .navbar,
+    body.light-mode .navbar-menu,
+    body.light-mode .hero,
+    body.light-mode .section,
+    body.light-mode .footer {
+      background-color: #ffffff;
+      color: #111827;
+    }
+
+    body.light-mode .navbar-item,
+    body.light-mode .navbar-link {
+      color: #111827;
+    }
+
+    body.light-mode .navbar-burger span {
+      background-color: #111827;
+    }
+
+    body.light-mode .navbar-dropdown {
+      background-color: #ffffff;
+      border: 1px solid #e5e7eb;
+    }
+
+    body.light-mode .navbar-dropdown .navbar-item:hover {
+      background-color: #f3f4f6;
+    }
+
+    body.light-mode .box,
+    body.light-mode .notification,
+    body.light-mode .table,
+    body.light-mode pre,
+    body.light-mode code {
+      background-color: #ffffff;
+      color: #111827;
+      border-color: #e5e7eb;
+    }
+
+    body.light-mode .table thead th,
+    body.light-mode .table tbody td {
+      border-color: #e5e7eb;
+    }
+
     /* --- Dark mode theme (shared palette with RepoWise site) --- */
     body.dark-mode {
       background-color: #020617; /* slate-950 */
@@ -197,7 +248,7 @@
 
   </style>
 </head>
-<body>
+<body class="light-mode">
 
 <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
