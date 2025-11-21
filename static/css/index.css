@@ -4,6 +4,53 @@ body {
   color: #1f1f1f;
 }
 
+body.light-mode {
+  background-color: #f9f9f9;
+  color: #1f1f1f;
+}
+
+body.light-mode .hero,
+body.light-mode .hero-body,
+body.light-mode .section,
+body.light-mode .navbar,
+body.light-mode footer,
+body.light-mode .container {
+  background-color: #ffffff;
+}
+
+body.light-mode .navbar {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+body.light-mode .navbar-item,
+body.light-mode .navbar-link,
+body.light-mode .navbar-brand .navbar-burger {
+  color: #1f1f1f;
+}
+
+body.light-mode .navbar-burger span {
+  background-color: #1f1f1f;
+}
+
+body.light-mode .navbar-dropdown {
+  background-color: #ffffff;
+  border-color: #e5e7eb;
+}
+
+body.light-mode .navbar-item:hover,
+body.light-mode .navbar-link:hover,
+body.light-mode .navbar-dropdown .navbar-item:hover {
+  background-color: #f2f2f2;
+}
+
+body.light-mode a {
+  color: #1a73e8;
+}
+
+body.light-mode a:hover {
+  color: #0f3c68;
+}
+
 
 .footer .icon-link {
     font-size: 25px;
