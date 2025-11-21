@@ -19,6 +19,45 @@ function setInterpolationImage(i) {
   $('#interpolation-image-wrapper').empty().append(image);
 }
 
+function updateThemeToggle(theme) {
+  var icon = $('#theme-toggle i');
+  var label = $('#theme-toggle .toggle-label');
+  var button = $('#theme-toggle');
+
+  if (theme === 'dark') {
+    icon.removeClass('fa-moon').addClass('fa-sun');
+    label.text('Light');
+    button.removeClass('is-light').addClass('is-dark');
+  } else {
+    icon.removeClass('fa-sun').addClass('fa-moon');
+    label.text('Dark');
+    button.removeClass('is-dark').addClass('is-light');
+  }
+}
+
+function setTheme(theme) {
+  if (theme === 'dark') {
+    $('body').addClass('dark-mode');
+  } else {
+    $('body').removeClass('dark-mode');
+  }
+  updateThemeToggle(theme);
+}
+
+function initializeTheme() {
+  var storedTheme = localStorage.getItem('ossprey-theme');
+  var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  var initialTheme = storedTheme || (prefersDark ? 'dark' : 'light');
+  setTheme(initialTheme);
+
+  $('#theme-toggle').on('click', function() {
+    var currentTheme = $('body').hasClass('dark-mode') ? 'dark' : 'light';
+    var nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    setTheme(nextTheme);
+    localStorage.setItem('ossprey-theme', nextTheme);
+  });
+}
+
 
 $(document).ready(function() {
     // Check for click events on the navbar burger icon
@@ -74,5 +113,7 @@ $(document).ready(function() {
     $('#interpolation-slider').prop('max', NUM_INTERP_FRAMES - 1);
 
     bulmaSlider.attach();
+
+    initializeTheme();
 
 })
