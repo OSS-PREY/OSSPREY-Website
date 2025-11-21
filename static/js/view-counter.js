@@ -188,6 +188,18 @@ async function fetchUserCount() {
   }
 }
 
+function updateCurrentYear() {
+  const yearElements = document.querySelectorAll('[data-current-year]');
+  if (!yearElements.length) {
+    return;
+  }
+
+  const currentYear = new Date().getFullYear();
+  yearElements.forEach((element) => {
+    element.textContent = currentYear;
+  });
+}
+
 async function initializeViewCounter() {
   const element = document.getElementById('view-count');
   if (!element) {
@@ -202,5 +214,6 @@ async function initializeViewCounter() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  updateCurrentYear();
   initializeViewCounter();
 });
