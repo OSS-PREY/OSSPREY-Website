@@ -1109,62 +1109,6 @@ MONGODB_URI="mongodb://ossprey-backend:FL3YyVGCr79xlPT0@localhost:27017/decal-db
   yearSpans.forEach(span => {
     span.textContent = new Date().getFullYear();
   });
-
-  // --- Dark mode toggle logic (mirrors RepoWise site) ---
-  (function () {
-    const body = document.body;
-    const toggleBtn = document.getElementById('theme-toggle');
-    if (!toggleBtn) return;
-
-    const iconEl = toggleBtn.querySelector('.icon i');
-    const labelEl = toggleBtn.querySelector('.toggle-label');
-
-    function applyTheme(theme) {
-      const isDark = theme === 'dark';
-
-      if (isDark) {
-        body.classList.add('dark-mode');
-      } else {
-        body.classList.remove('dark-mode');
-      }
-
-      if (isDark) {
-        toggleBtn.classList.remove('is-light');
-        toggleBtn.classList.add('is-dark');
-        if (iconEl) {
-          iconEl.classList.remove('fa-moon');
-          iconEl.classList.add('fa-sun');
-        }
-        if (labelEl) labelEl.textContent = 'Light';
-      } else {
-        toggleBtn.classList.remove('is-dark');
-        toggleBtn.classList.add('is-light');
-        if (iconEl) {
-          iconEl.classList.remove('fa-sun');
-          iconEl.classList.add('fa-moon');
-        }
-        if (labelEl) labelEl.textContent = 'Dark';
-      }
-
-      localStorage.setItem('ossprey-theme', theme);
-    }
-
-    // Initialize theme from localStorage or system preference
-    const storedTheme = localStorage.getItem('ossprey-theme');
-    if (storedTheme === 'dark' || storedTheme === 'light') {
-      applyTheme(storedTheme);
-    } else {
-      const prefersDark = window.matchMedia &&
-        window.matchMedia('(prefers-color-scheme: dark)').matches;
-      applyTheme(prefersDark ? 'dark' : 'light');
-    }
-
-    // Toggle on click
-    toggleBtn.addEventListener('click', function () {
-      const isDark = body.classList.contains('dark-mode');
-      applyTheme(isDark ? 'light' : 'dark');
-    });
-  })();
 </script>
 
 </body>
