@@ -250,6 +250,10 @@ body.dark-mode .navbar-dropdown .navbar-item:hover {
   background-color: #1f2433;
 }
 
+body.dark-mode .navbar-item.has-dropdown.is-hoverable:hover .navbar-link {
+  background-color: #1f2433;
+}
+
 body.dark-mode a {
   color: #8ab4f8;
 }
