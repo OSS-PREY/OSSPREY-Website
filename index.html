@@ -75,24 +75,6 @@
       color: #111827;
     }
 
-    /* Blue outline treatment for top-level navbar controls */
-    .navbar .nav-outline {
-      border: 1.5px solid #2563eb;
-      border-radius: 9999px;
-      padding: 0.5rem 0.9rem;
-      margin: 0 0.35rem;
-      color: inherit;
-      transition: box-shadow 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
-    }
-
-    .navbar .nav-outline:hover,
-    .navbar .nav-outline:focus-visible {
-      background-color: rgba(37, 99, 235, 0.08);
-      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.28);
-      outline: none;
-      transform: translateY(-1px);
-    }
-
     body.light-mode .navbar-burger span {
       background-color: #111827;
     }
@@ -143,16 +125,6 @@
     body.dark-mode .navbar-item,
     body.dark-mode .navbar-link {
       color: #e5e7eb;
-    }
-
-    body.dark-mode .navbar .nav-outline {
-      border-color: #60a5fa;
-    }
-
-    body.dark-mode .navbar .nav-outline:hover,
-    body.dark-mode .navbar .nav-outline:focus-visible {
-      background-color: rgba(96, 165, 250, 0.12);
-      box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.32);
     }
 
     body.dark-mode .navbar-burger span {
@@ -352,14 +324,14 @@
   </div>
   <div class="navbar-menu">
     <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item nav-outline" href="https://decallab.cs.ucdavis.edu/" target="_blank">
+      <a class="navbar-item" href="https://decallab.cs.ucdavis.edu/" target="_blank">
       <span class="icon">
           <i class="fas fa-home"></i>
       </span>
       </a>
 
       <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link nav-outline">
+        <a class="navbar-link">
           Previously Built Tools
         </a>
         <div class="navbar-dropdown">
@@ -382,7 +354,7 @@
       </div>
 
       <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link nav-outline">
+        <a class="navbar-link">
           Related Research
         </a>
         <div class="navbar-dropdown">
@@ -400,7 +372,7 @@
         </div>
       </div>
 
-      <a class="navbar-item nav-outline" href="#User-Guide">
+      <a class="navbar-item" href="#User-Guide">
         <span class="icon">
           <i class="fas fa-book-open"></i>
         </span>
