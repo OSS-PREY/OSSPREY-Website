@@ -85,6 +85,31 @@ function initializeTheme() {
   });
 }
 
+function initializeStickySectionNav() {
+  var trigger = document.querySelector('.publication-links');
+  var stickyNav = document.getElementById('sticky-section-nav');
+
+  if (!trigger || !stickyNav) {
+    return;
+  }
+
+  var toggleNav = function(show) {
+    stickyNav.classList.toggle('is-visible', show);
+  };
+
+  if ('IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        toggleNav(!entry.isIntersecting);
+      });
+    });
+
+    observer.observe(trigger);
+  } else {
+    toggleNav(true);
+  }
+}
+
 
 $(document).ready(function() {
     // Check for click events on the navbar burger icon
@@ -134,5 +159,6 @@ $(document).ready(function() {
 
     initializeInterpolationDemo();
     initializeTheme();
+    initializeStickySectionNav();
 
 })

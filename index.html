@@ -258,6 +258,58 @@
       border-color: #1f2937 !important;
     }
 
+    .sticky-section-nav {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(-8px);
+      padding: 0 1rem;
+      transition: opacity 0.3s ease, transform 0.3s ease, max-height 0.3s ease, padding 0.3s ease;
+      backdrop-filter: blur(8px);
+    }
+
+    .sticky-section-nav.is-visible {
+      max-height: 500px;
+      opacity: 1;
+      transform: translateY(0);
+      padding: 0.75rem 1rem;
+    }
+
+    .sticky-nav-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+    }
+
+    body.light-mode .sticky-section-nav {
+      background-color: rgba(255, 255, 255, 0.94);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    body.dark-mode .sticky-section-nav {
+      background-color: rgba(2, 6, 23, 0.94);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+      border-bottom: 1px solid #1f2937;
+    }
+
+    .sticky-section-nav .button.is-dark {
+      background-color: #0f172a;
+      border-color: #1f2937;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+      color: #e5e7eb;
+    }
+
+    .sticky-section-nav .button.is-dark:hover {
+      background-color: #111827;
+      border-color: #1f2937;
+    }
+
   </style>
 </head>
 <body class="light-mode">
@@ -342,6 +394,55 @@
   </div>
 </nav>
 
+<div id="sticky-section-nav" class="sticky-section-nav" aria-label="Section navigation">
+  <div class="container is-max-desktop">
+    <div class="sticky-nav-buttons">
+      <a href="https://ossprey.netlify.app" target="_blank" class="button is-normal is-rounded is-dark">
+        <span class="icon">
+          <i class="fas fa-rocket"></i>
+        </span>
+        <span>Live</span>
+      </a>
+      <a href="https://github.com/OSS-PREY" target="_blank" class="button is-normal is-rounded is-dark">
+        <span class="icon">
+          <i class="fab fa-github"></i>
+        </span>
+        <span>Code</span>
+      </a>
+      <a href="https://zenodo.org/records/15307373" target="_blank" class="button is-normal is-rounded is-dark">
+        <span class="icon">
+          <i class="far fa-images"></i>
+        </span>
+        <span>Data</span>
+      </a>
+      <a href="#API" class="button is-normal is-rounded is-dark">
+        <span class="icon">
+          <i class="fas fa-code"></i>
+        </span>
+        <span>API Endpoints</span>
+      </a>
+      <a href="#Features" class="button is-normal is-rounded is-dark">
+        <span class="icon">
+          <i class="fas fa-list"></i>
+        </span>
+        <span>Features</span>
+      </a>
+      <a href="#Installation" class="button is-normal is-rounded is-dark">
+        <span class="icon">
+          <i class="fas fa-tools"></i>
+        </span>
+        <span>Install</span>
+      </a>
+      <a href="#Docker" class="button is-normal is-rounded is-dark">
+        <span class="icon">
+          <i class="fab fa-docker"></i>
+        </span>
+        <span>Docker</span>
+      </a>
+    </div>
+  </div>
+</div>
+
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
@@ -411,7 +512,7 @@
               </span>
               <!-- API Endpoints Link. -->
               <span class="link-block">
-                <a href="#API" target="_blank"
+                <a href="#API"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-code"></i>
@@ -421,7 +522,7 @@
               </span>
               <!-- Features Link. -->
               <span class="link-block">
-                <a href="#Features" target="_blank"
+                <a href="#Features"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-list"></i>
@@ -431,7 +532,7 @@
               </span>
               <!-- Installation Manual. -->
               <span class="link-block">
-                <a href="#Installation" target="_blank"
+                <a href="#Installation"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-tools"></i>
@@ -441,7 +542,7 @@
               </span>
 
               <span class="link-block">
-                <a href="#Docker" target="_blank"
+                <a href="#Docker"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="fab fa-docker"></i>
