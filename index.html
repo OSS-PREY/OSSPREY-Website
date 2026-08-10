@@ -619,7 +619,7 @@
 
             <h4 class="title is-5 mt-5">ReACT-Recommender Module</h4>
             <p>
-              This Python-based recommendation engine implements the ReACTs framework, which consists of 105 curated actionables derived from 186 empirical software engineering studies. The module identifies underperforming features and recommends interventions tagged as <em>Critical</em>, <em>Medium</em>, or <em>Low</em> based on their impact, linking each recommendation to the original research publication.
+              This Python-based recommendation engine implements the ReACTs framework, which consists of 105 curated actionables derived from 186 empirical software engineering studies. The module identifies underperforming features and recommends interventions tagged as <em>Critical</em>, <em>Medium</em>, or <em>Low</em> based on their impact, linking each recommendation to the original research publication. Recommendations are matched to the individual project rather than presented as a fixed list, so two projects with different problems see different advice.
             </p>
         </div>
       </div>
@@ -833,11 +833,14 @@
           <h4 class="title is-4">Project Details</h4>
           <p>The details card summarizes metadata about the selected project such as its incubation status, GitHub link, and popularity metrics like stars or forks. Reviewing this information helps set expectations about activity levels before interpreting the predictive plots.</p>
 
+          <h4 class="title is-4">Project Pain Points</h4>
+          <p>Above the project details, OSSPREY summarizes what is going wrong in the project right now: contributors falling away, work concentrating in too few hands, files only one person has ever touched, developers who commit but never join a discussion, and governance documents the project is missing. These are problems, not prescriptions &mdash; the recommendations below are where the suggested actions live.</p>
+
           <h4 class="title is-4">Probability of Sustainability</h4>
           <p>A line chart visualizes the predicted health score from 0 (low) to 1 (high). Hover over the graph to inspect monthly probabilities. Downward slopes or sharp drops indicate periods of risk where intervention may be required.</p>
 
           <h4 class="title is-4">Researched Actionables</h4>
-          <p>Based on deviations in the forecast and socio-technical metrics, this table lists research-backed recommendations. Each item links to the supporting literature and is annotated with a severity level so maintainers can prioritize critical actions.</p>
+          <p>Based on deviations in the forecast and socio-technical metrics, this table lists research-backed recommendations selected for the project you are looking at &mdash; matched against its own collaboration patterns, the technologies it is built in, and the governance documents it has. Each recommendation carries a short note on why it applies to this project, links to the supporting literature, and is annotated with a severity level so maintainers can prioritize critical actions. By default the recommendations reflect the project's whole history; you can also ask for a particular month.</p>
 
           <h4 class="title is-4">Social Network</h4>
           <p>The social network graph illustrates how contributors communicate across issues and mailing lists. Nodes correspond to developers and edges denote message exchanges. Dense clusters highlight active discussion, while isolated nodes reveal potential disconnects.</p>
